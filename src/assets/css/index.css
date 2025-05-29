@@ -3,12 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+#root{
     width: 1440px;
     height: 2530px;
     margin: auto;
-    background-color: #FFFFFF;
+    background-color: #df1b1b;
 }
+
 
 @media (max-width:540){
     root{
