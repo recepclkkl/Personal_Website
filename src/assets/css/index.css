@@ -7,9 +7,12 @@
     width: 1440px;
     height: 2530px;
     margin: auto;
-    background-color: #df1b1b;
+    background-color: #ffffff;
 }
 
+.dark #root {
+    background-color: #252128;
+}
 
 @media (max-width:540){
     root{

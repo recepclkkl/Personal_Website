@@ -35,7 +35,7 @@ function Mode() {
         >{isDark ? <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#D9D9D9]" >🌙 DARK MODE</p> : <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]">☀️ LIGHT MODE</p> }</button>
         <p className="text-[#D9D9D9] dark: text-[#777777]">|</p>
         <button onClick={toggleLanguage}>
-          {currentLang === "tr" ? <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]">SWITCH TO <span className="text-[#4731D3]" >ENGLISH</span></p> : <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]"><span className="text-[#4731D3]" >TÜRKÇE</span>'YE GEÇ</p>}
+          {currentLang === "tr" ? <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]">SWITCH TO <span className="text-[#4731D3] dark:text-[#B7AAFF]" >ENGLISH</span></p> : <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]"><span className="text-[#4731D3] dark:text-[#B7AAFF]" >TÜRKÇE</span>'YE GEÇ</p>}
         </button>
       </div>
 
