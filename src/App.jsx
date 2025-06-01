@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Profile from './components/profile';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   
@@ -15,7 +16,8 @@ function App() {
   const t = lang[language];
 
   return (
-    <div className='w-[1140px] h-[2530px] mx-auto  relative'>
+    <div className='w-[1140px] h-[2530px] mx-auto relative'>
+      <LanguageProvider>
       <Mode />
       <Header />
       <Hero />
@@ -23,6 +25,7 @@ function App() {
       <Profile />
       <Projects />
       <Footer />
+      </LanguageProvider>
     </div>
   )
 }

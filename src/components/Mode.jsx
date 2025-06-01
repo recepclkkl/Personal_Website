@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setLanguage } from "./langReducer";
+// import { setLanguage } from "./langReducer";
+import data from "../data/data";
+import { useLang } from "../context/LanguageContext";
 
 function Mode() {
   const [isDark, setIsDark] = useState(() =>
@@ -20,11 +22,14 @@ function Mode() {
   }, [isDark]);
 
   const dispatch = useDispatch();
+
+  const { lang, toggleLang } = useLang();
+
   const currentLang = useSelector((state) => state.language.language);
 
-  const toggleLanguage = () => {
-    dispatch(setLanguage(currentLang === "tr" ? "en" : "tr"));
-  };
+  // const toggleLanguage = () => {
+  //   dispatch(setLanguage(currentLang === "tr" ? "en" : "tr"));
+  // };
 
   return (
     <>
@@ -34,8 +39,9 @@ function Mode() {
         className="text-black dark:text-white"
         >{isDark ? <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#D9D9D9]" >🌙 DARK MODE</p> : <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]">☀️ LIGHT MODE</p> }</button>
         <p className="text-[#D9D9D9] dark: text-[#777777]">|</p>
-        <button onClick={toggleLanguage}>
-          {currentLang === "tr" ? <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]">SWITCH TO <span className="text-[#4731D3] dark:text-[#B7AAFF]" >ENGLISH</span></p> : <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]"><span className="text-[#4731D3] dark:text-[#B7AAFF]" >TÜRKÇE</span>'YE GEÇ</p>}
+        
+        <button onClick={toggleLang}>
+          {lang === "tr" ? <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]">SWITCH TO <span className="text-[#4731D3] dark:text-[#B7AAFF]" >ENGLISH</span></p> : <p className="font-inter font-bold text-[15px] leading-[100%] tracking-[0.10em] text-[#777777]"><span className="text-[#4731D3] dark:text-[#B7AAFF]" >TÜRKÇE</span>'YE GEÇ</p>}
         </button>
       </div>
 
