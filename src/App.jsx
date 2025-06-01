@@ -1,5 +1,5 @@
 
-import Mode from './components/mode'
+import Mode from './components/Mode'
 import { useSelector } from "react-redux";
 import { lang } from './languange/lang';
 import Header from './components/Header';
