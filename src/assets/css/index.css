@@ -14,9 +14,9 @@
     background-color: #252128;
 }
 
-@media (max-width:540){
-    root{
-        width: 540px;
-        height: auto;
+@media (max-width:540px){
+    #root{
+        width: 730px;
+        height: 2885px;
     }
 }

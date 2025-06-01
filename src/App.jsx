@@ -9,6 +9,7 @@ import Profile from './components/profile';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
+import PostData from './data/postData';
 
 function App() {
   
@@ -16,7 +17,7 @@ function App() {
   const t = lang[language];
 
   return (
-    <div className='w-[1140px] h-[2530px] mx-auto relative'>
+    <div className='w-[1140px] h-[2530px] mx-auto relative max-[540px]:w-[730px]'>
       <LanguageProvider>
       <Mode />
       <Header />
@@ -26,6 +27,7 @@ function App() {
       <Projects />
       <Footer />
       </LanguageProvider>
+      <PostData />
     </div>
   )
 }
